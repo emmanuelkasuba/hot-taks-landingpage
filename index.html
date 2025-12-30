@@ -3,17 +3,70 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HotTaks — ZUT's Living Social Platform</title>
+  <title>HotTaks v1.2.0 — ZUT's Living Social Platform</title>
   <meta name="description" content="Open-source social app for Zambia University of Technology students. Authored by Emmanuel Kasuba."/>
 
   <!-- Open Graph -->
-  <meta property="og:title" content="HotTaks v1.0.0 — By Emmanuel Kasuba"/>
-  <meta property="og:description" content="The social platform that grows with ZUT students. Open source. Always evolving."/>
+  <meta property="og:title" content="HotTaks v1.2.0 — By Emmanuel Kasuba"/>
+  <meta property="og:description" content="The social platform that grows with ZUT students. Version 1.2.0 released with account creation and posting features."/>
   <meta property="og:image" content="https://hottaks.github.io/og-preview.jpg"/>
   <meta property="og:url" content="https://hottaks.github.io"/>
 
   <link rel="stylesheet" href="style.css"/>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>fire</text></svg>"/>
+  <style>
+    /* Additional styles for new features */
+    .new-badge {
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 10px;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin: 40px 0;
+    }
+    
+    .feature-card {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: #2575fc;
+    }
+    
+    .release-highlight {
+      background: linear-gradient(to right, #f8f9fa, #e9ecef);
+      padding: 30px;
+      border-radius: 15px;
+      margin: 40px 0;
+      text-align: center;
+      border-left: 5px solid #2575fc;
+    }
+  </style>
 </head>
 <body>
 
@@ -22,24 +75,25 @@
     <div class="container">
       <div class="hero-grid">
         <div class="hero-left">
+          <div class="new-badge">NEW RELEASE: v1.2.0</div>
           <h1 class="logo">HotTaks</h1>
-          <p class="version">v1.0.0 — November 2025</p>
+          <p class="version">v1.2.0 — Released Today</p>
           <p class="tagline">
             The social platform <span class="highlight">authored by Emmanuel Kasuba</span><br>
-            and continuously shaped by the ZUT community.
+            now with account creation and posting features!
           </p>
           
           <div class="badges">
             <span class="badge open-source">Open Source</span>
             <span class="badge zut-only">ZUT Only</span>
-            <span class="badge living">Living App</span>
+            <span class="badge living">Version 1.2.0 Live</span>
           </div>
 
           <div class="buttons">
-            <a href="https://github.com/emmanuelkasuba/hot-taks-landingpage/releases" target="_blank" class="btn-primary">
-              Download Now
+            <a href="https://github.com/emmanuelkasuba/hot-taks-landingpage/releases/tag/v1.2.0" target="_blank" class="btn-primary">
+              Download v1.2.0
             </a>
-            <a href="#waitlist" class="btn-secondary">Join Waitlist</a>
+            <a href="#features" class="btn-secondary">New Features</a>
           </div>
         </div>
 
@@ -52,6 +106,44 @@
     </div>
   </header>
 
+  <!-- NEW FEATURES SECTION -->
+  <section class="story" id="features">
+    <div class="container">
+      <h2>Version 1.2.0 Highlights</h2>
+      <p class="lead">
+        The biggest update yet: <strong>Create accounts and start posting!</strong>
+      </p>
+      
+      <div class="release-highlight">
+        <h3>🎉 Make an Account & Post — Now Live!</h3>
+        <p>Version 1.2.0 brings the core social experience: sign up, create your profile, and share with the ZUT community.</p>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">👤</div>
+          <h3>Account Creation</h3>
+          <p>Sign up with your ZUT email, create a unique profile, and join the network.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📝</div>
+          <h3>Post Creation</h3>
+          <p>Share text posts, express yourself, and engage with fellow students.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💬</div>
+          <h3>Comment & Engage</h3>
+          <p>React to posts, leave comments, and build conversations.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🚀</div>
+          <h3>Enhanced Performance</h3>
+          <p>Faster loading, smoother interactions, and better stability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- STORY — Perfect 3-column symmetry -->
   <section class="story">
     <div class="container">
@@ -63,25 +155,25 @@
       <div class="process-grid">
         <div class="step">
           <div class="step-icon">message</div>
-          <h3>A student speaks</h3>
-          <p>“We need group chats”</p>
+          <h3>Students spoke</h3>
+          <p>"We need to post and connect"</p>
         </div>
         <div class="arrow">→</div>
         <div class="step">
           <div class="step-icon">code</div>
-          <h3>Emmanuel builds</h3>
-          <p>Commit → Document → Release</p>
+          <h3>Emmanuel built</h3>
+          <p>Accounts & posting system</p>
         </div>
         <div class="arrow">→</div>
         <div class="step">
           <div class="step-icon">rocket</div>
-          <h3>A new version lives</h3>
-          <p>v1.0.1 → v1.1 → v2.0…</p>
+          <h3>v1.2.0 is here</h3>
+          <p>Create, post, engage today</p>
         </div>
       </div>
 
       <p class="closing">
-        Every release is a chapter in the story of ZUT students building their own digital home.
+        Version 1.2.0 marks our biggest leap yet—from concept to fully functional social platform.
       </p>
     </div>
   </section>
@@ -92,24 +184,24 @@
       <h2>The Road Ahead</h2>
       <div class="future-grid">
         <div class="future-card">
-          <div class="future-icon">person</div>
-          <h3>Profile Customization</h3>
-          <p>Banners, emojis, campus tags</p>
+          <div class="future-icon">📸</div>
+          <h3>Photo & Video Posts</h3>
+          <p>Coming in v1.3.0</p>
         </div>
         <div class="future-card">
-          <div class="future-icon">camera</div>
-          <h3>Rich Media & Stories</h3>
-          <p>Photos, videos, 24h posts</p>
+          <div class="future-icon">👥</div>
+          <h3>Group Chats</h3>
+          <p>Study groups, clubs, hostels</p>
         </div>
         <div class="future-card">
-          <div class="future-icon">calendar</div>
-          <h3>Clubs & Events</h3>
-          <p>Official pages, RSVPs</p>
+          <div class="future-icon">📅</div>
+          <h3>Event Calendar</h3>
+          <p>Campus events & deadlines</p>
         </div>
         <div class="future-card">
-          <div class="future-icon">chat</div>
-          <h3>Group Discussions</h3>
-          <p>Class, hostel, study groups</p>
+          <div class="future-icon">🔔</div>
+          <h3>Notifications</h3>
+          <p>Real-time updates & alerts</p>
         </div>
       </div>
     </div>
@@ -118,8 +210,16 @@
   <!-- CTA — Perfect center alignment -->
   <section class="cta" id="waitlist">
     <div class="container">
-      <h2>Be Part of the Story</h2>
-      <p class="cta-lead">HotTaks grows because students speak.<br>Your voice shapes the next version.</p>
+      <h2>Join HotTaks Today</h2>
+      <p class="cta-lead">Version 1.2.0 is live! Create your account, make your first post, and connect with ZUT.</p>
+      
+      <div style="text-align: center; margin: 30px 0;">
+        <a href="https://github.com/emmanuelkasuba/hot-taks-landingpage/releases/tag/v1.2.0" target="_blank" class="btn-primary" style="font-size: 1.2rem; padding: 15px 30px;">
+          🚀 Download & Install Now
+        </a>
+      </div>
+      
+      <p class="cta-lead">Or join the waitlist for future updates:</p>
       
       <form id="waitlist-form" class="waitlist-form">
         <input type="email" placeholder="yourname@zut.ac.zm" required />
@@ -135,12 +235,43 @@
   <!-- FOOTER — Perfect symmetry -->
   <footer>
     <div class="container">
-      <p class="author">HotTaks v1.0.0 — Authored & released by <strong>Emmanuel Kasuba</strong></p>
+      <p class="author">HotTaks v1.2.0 — Authored & released by <strong>Emmanuel Kasuba</strong></p>
       <p class="motto">Made with love, late nights, and pure ZUT energy</p>
       <p class="copyright">© 2025 HotTaks • Open Source • Forever Evolving</p>
+      <p class="copyright" style="margin-top: 10px;">
+        <strong>What's New:</strong> Account creation • Posting system • Comments • Enhanced performance
+      </p>
     </div>
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // Enhanced form submission
+    document.getElementById('waitlist-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = this.querySelector('input[type="email"]').value;
+      const successMsg = document.getElementById('success');
+      
+      // Validate ZUT email
+      if (email.includes('@zut.ac.zm')) {
+        successMsg.textContent = "Perfect! You're on the list for future updates. Download v1.2.0 now to start posting!";
+        successMsg.style.display = 'block';
+        this.reset();
+        
+        // Scroll to success message
+        successMsg.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        alert('Please use your ZUT email address (@zut.ac.zm)');
+      }
+    });
+    
+    // Add download tracking
+    document.querySelectorAll('.btn-primary').forEach(btn => {
+      btn.addEventListener('click', function() {
+        console.log('Download clicked for v1.2.0');
+        // Here you could add analytics tracking
+      });
+    });
+  </script>
 </body>
 </html>
